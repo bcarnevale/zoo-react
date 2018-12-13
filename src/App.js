@@ -17,11 +17,11 @@ class App extends Component {
       <div className="App">
         <Header />
         <h3>Number of Lions:</h3>
-        <Animals updateAnimals={this.handleClick.bind(this)}/>
+        <Animals id="lion" updateAnimals={this.handleClick.bind(this)}/>
         <h3>Number of Giraffes:</h3>
-        <Animals updateAnimals={this.handleClick.bind(this)}/>
+        <Animals id="giraffe" updateAnimals={this.handleClick.bind(this)}/>
         <h3>Number of Tigers:</h3>
-        <Animals updateAnimals={this.handleClick.bind(this)}/>
+        <Animals id="tiger" updateAnimals={this.handleClick.bind(this)}/>
         <h2>There are {this.state.totalAnimals} animals in your zoo!</h2>
       </div>
     );
