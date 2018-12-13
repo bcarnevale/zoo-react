@@ -1,25 +1,28 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
+import Header from './Header'
+import Animals from './Animals';
 
 class App extends Component {
+  state = {
+    totalAnimals: 0
+  }
+  handleClick() {
+    const currentTotal = this.state.totalAnimals;
+    this.setState({ totalAnimals: currentTotal + 1 })
+  }
   render() {
     return (
       <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
+        <Header />
+        <h3>Number of Lions:</h3>
+        <Animals updateAnimals={this.handleClick.bind(this)}/>
+        <h3>Number of Giraffes:</h3>
+        <Animals updateAnimals={this.handleClick.bind(this)}/>
+        <h3>Number of Tigers:</h3>
+        <Animals updateAnimals={this.handleClick.bind(this)}/>
+        <h2>There are {this.state.totalAnimals} animals in your zoo!</h2>
       </div>
     );
   }
