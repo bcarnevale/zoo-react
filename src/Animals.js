@@ -23,9 +23,9 @@ class Animals extends Component {
     render() {
         return (
             <div>
-                <h1>{this.state.numOfAnimals}</h1>
-                <button onClick={this.incrementAnimals.bind(this)}>Add another {this.props.id}!</button>
-                <button onClick={this.decrementAnimals.bind(this)}>Remove a {this.props.id} :(</button>
+                <h2>{this.props.id}s: {this.state.numOfAnimals}</h2>
+                <button onClick={this.incrementAnimals.bind(this)}>More {this.props.id}s</button>
+                <button onClick={this.decrementAnimals.bind(this)}>Less {this.props.id}s</button>
             </div>
         )
     }
