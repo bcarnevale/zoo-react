@@ -13,12 +13,12 @@ class Animals extends Component {
     incrementAnimals() {
         const currentNum = this.state.numOfAnimals;
         this.setState({ numOfAnimals: currentNum + 1 });
-        this.props.updateAnimals();
+        this.props.updateAnimalsAdd();
     }
     decrementAnimals() {
         const currentNum = this.state.numOfAnimals;
         this.setState({ numOfAnimals: currentNum - 1 });
-        this.props.updateAnimals();
+        this.props.updateAnimalsRemove();
     }
     render() {
         return (
